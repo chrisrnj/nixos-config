@@ -38,6 +38,10 @@
       modules = [
         ({
           networking.hostName = "Chris";
+
+          services.xserver.xkb.layout = "br";
+
+          console.keyMap = "br-abnt2";
         })
 
         inputs.lanzaboote.nixosModules.lanzaboote
@@ -55,6 +59,14 @@
       modules = [
         ({
           networking.hostName = "MacBook-Air-de-Christiano";
+
+          services.xserver.xkb = {
+            layout = "us";
+            model = "apple";
+            variant = "alt-intl";
+          };
+
+          console.keyMap = "us";
         })
 
         inputs.apple-silicon.nixosModules.default

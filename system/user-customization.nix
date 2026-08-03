@@ -19,12 +19,6 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "br";
-
-  # Configure console keymap
-  console.keyMap = "br-abnt2";
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.christiano = {
     isNormalUser = true;
