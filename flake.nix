@@ -42,6 +42,8 @@
           services.xserver.xkb.layout = "br";
 
           console.keyMap = "br-abnt2";
+
+          system.stateVersion = "25.11";
         })
 
         inputs.lanzaboote.nixosModules.lanzaboote
@@ -67,6 +69,8 @@
           };
 
           console.keyMap = "us";
+
+          system.stateVersion = "26.11";
         })
 
         inputs.apple-silicon.nixosModules.default
