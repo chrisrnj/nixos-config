@@ -9,8 +9,7 @@
       ./java
 #       ./nix-ld # Run arbitrary programs.
       ./obs # OBS and plugins.
-      ./prismlauncher
-      ./steam # Steam installation settings.
+      ./gaming # Gaming settings.
       ./sunshine # Sunshine configuration.
     ];
 
@@ -20,14 +19,12 @@
     # Productivity
     gimp-with-plugins
     tenacity
-    davinci-resolve
 
     # Development
     jetbrains.idea
     android-tools
     maven
     msedit
-    unityhub
     vscode.fhs
     dotnet-sdk
     gnumake
@@ -44,16 +41,11 @@
     yt-dlp
 #     inputs.librepods.packages.${pkgs.stdenv.hostPlatform.system}.default
     proton-vpn
-
-    # Games
-    bs-manager
-    mangohud
-    heroic
-    wayvr
-
-    # Internet
-    dropbox
     stremio-linux-shell
+  ] ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+    davinci-resolve
+    dropbox
+    unityhub
   ];
 
   # Firefox

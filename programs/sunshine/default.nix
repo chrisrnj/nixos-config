@@ -4,7 +4,7 @@ let
   x11-environment = "xcb XAUTHORITY=$(${lib.getExe' pkgs.findutils "find"} /run/user/1000 -maxdepth 1 -name 'xauth_*' | ${lib.getExe' pkgs.coreutils "head"} -n1) DISPLAY=:0";
   kscreen-doctor = "env QT_QPA_PLATFORM=${if config.services.displayManager.defaultSession == "plasmax11" then x11-environment else "wayland"} ${lib.getExe' pkgs.kdePackages.libkscreen "kscreen-doctor"}";
   busctl = "${lib.getExe' pkgs.systemd "busctl"}";
-  solar-flare = pkgs.callPackage ./solar-flare.nix {};
+  solar-flare = if pkgs.stdenv.hostPlatform.system == "x86_64-linux" then pkgs.callPackage ./solar-flare.nix {} else null;
 in
 {
   imports = [
@@ -28,7 +28,7 @@ in
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
-    package = if pkgs.stdenv.hostPlatform.system == "x86_64-linux" then solar-flare else pkgs.sunshine;
+    package = if solar-flare != null then solar-flare else pkgs.sunshine;
     settings = {
       address_family = "both";
       locale = "pt_BR";
