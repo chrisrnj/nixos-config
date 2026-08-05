@@ -37,6 +37,7 @@
     mpv
     handbrake
     ffmpeg
+    filezilla
     yt-dlp
 #     inputs.librepods.packages.${pkgs.stdenv.hostPlatform.system}.default
     proton-vpn
