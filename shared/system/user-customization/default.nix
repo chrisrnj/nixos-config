@@ -57,8 +57,4 @@
   services.displayManager.plasma-login-manager.enable = true;
   services.desktopManager.plasma6.enable = true;
   xdg.portal.config.common.default = [ "kde" "gtk" ];
-
-  # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "christiano";
 }

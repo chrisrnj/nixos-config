@@ -35,7 +35,6 @@ in
       # Enable virtual display
       global_prep_cmd = "[{\"do\":\"${kscreen-doctor} output.DP-1.enable output.HDMI${if config.services.displayManager.defaultSession == "plasmax11" then "" else "-A"}-1.disable\",\"undo\":\"${config.systemd.user.services.disableVirtualDisplay.script}\"}]";
       encoder = "vulkan";
-#       skip_wayland_correlation = "true";
       capture = "kms";
       vk_tune = "1";
       wan_encryption_mode = "0";

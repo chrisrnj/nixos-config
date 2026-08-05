@@ -5,14 +5,6 @@
 { config, pkgs, lib, inputs, ... }:
 
 {
-  imports = [
-    ./hardware-configuration.nix # Include the results of the hardware scan.
-    ./system # System related settings.
-    ./programs # Packages to install.
-  ];
-
-  nixpkgs.overlays = (import ./overlays);
-
   boot = {
     # Clean Quiet Boot
     plymouth.enable = true;

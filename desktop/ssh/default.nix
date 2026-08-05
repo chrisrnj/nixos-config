@@ -1,15 +1,7 @@
 { ... }:
 
 {
-  # Enable the OpenSSH daemon.
-  services.openssh = {
-    enable = true;
-    ports = [ 6755 ];
-    settings = {
-      PasswordAuthentication = false;
-      KbdInteractiveAuthentication = false;
-    };
-  };
+  services.openssh.ports = [ 6755 ];
 
   users.users.christiano.openssh.authorizedKeys.keys = [ "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILXZ1XC1f1v0s/39S8VyEI742EslYBTf13lLO49TTbCz christiano@Chris" ];
 

@@ -6,6 +6,7 @@
     networkmanager = {
       enable = true; # Enable networking
       dns = "none";
+      wifi.backend = "iwd";
     };
 
     # Cloudflare DNS
@@ -13,12 +14,6 @@
     dhcpcd.extraConfig = "nohook resolv.conf";
 
     nftables.enable = true;
-
-    interfaces.enp7s0 = {
-      mtu = 1480;
-      # Wake on LAN
-      wakeOnLan.enable = true;
-    };
   };
 
 # Generate an immutable /etc/resolv.conf from the nameserver settings

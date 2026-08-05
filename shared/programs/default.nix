@@ -6,11 +6,10 @@
 #       ./audiorelay # AudioRelay virtual mic sink.
       ./chromium # Ungoogled chromium install and policies for chromium-based browsers.
       ./discord
+      ./gaming # Gaming settings.
       ./java
 #       ./nix-ld # Run arbitrary programs.
       ./obs # OBS and plugins.
-      ./gaming # Gaming settings.
-      ./sunshine # Sunshine configuration.
     ];
 
   # List packages installed in system profile. To search, run:
@@ -42,8 +41,9 @@
 #     inputs.librepods.packages.${pkgs.stdenv.hostPlatform.system}.default
     proton-vpn
     stremio-linux-shell
-  ] ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-    davinci-resolve
+  ]
+  # These currently only have support for x86_64-linux, but it would be nice to have them working on both systems.
+  ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
     dropbox
     unityhub
   ];
@@ -74,11 +74,5 @@
 
   # KDE Partition manager
   programs.partition-manager.enable = true;
-
-  # Waydroid
-  virtualisation.waydroid.enable = true;
-
-  # OpenRGB
-  services.hardware.openrgb.enable = true;
 }
 

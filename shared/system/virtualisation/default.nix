@@ -41,17 +41,13 @@
 
   networking.firewall.trustedInterfaces = [ "virbr0" ];
 
-  boot = lib.mkIf config.hardware.cpu.intel.updateMicrocode {
-    initrd.kernelModules = [
-      "vfio_pci"
-      "vfio"
-      "vfio_iommu_type1"
-    ];
-
-    kernelParams = [
-      # Enable IOMMU
-      "intel_iommu=on"
-      "iommu=pt"
-    ];
-  };
+  boot.kernelParams = lib.optionals config.hardware.cpu.intel.updateMicrocode [
+    # Enable IOMMU
+    "intel_iommu=on"
+    "iommu=pt"
+  ] ++ lib.optionals config.hardware.cpu.amd.updateMicrocode [
+    # Enable IOMMU
+    "amd_iommu=on"
+    "iommu=pt"
+  ];
 }

@@ -38,21 +38,13 @@
       modules = [
         ({
           networking.hostName = "Chris";
-
-          services.xserver.xkb.layout = "br";
-
-          console.keyMap = "br-abnt2";
-
-          system.stateVersion = "25.11";
         })
 
         inputs.lanzaboote.nixosModules.lanzaboote
         inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
 
-        ./amdgpu
-        ./secureboot
-        ./kernels/cachyos-kernel.nix
-        ./configuration.nix
+        ./shared
+        ./desktop
       ];
     };
     nixosConfigurations.MacBook-Air-de-Christiano = nixpkgs.lib.nixosSystem {
@@ -61,22 +53,12 @@
       modules = [
         ({
           networking.hostName = "MacBook-Air-de-Christiano";
-
-          services.xserver.xkb = {
-            layout = "us";
-            model = "apple";
-            variant = "alt-intl";
-          };
-
-          console.keyMap = "us";
-
-          system.stateVersion = "26.11";
         })
 
         inputs.apple-silicon.nixosModules.default
 
-        ./asahi
-        ./configuration.nix
+        ./shared
+        ./laptop
       ];
     };
   };
