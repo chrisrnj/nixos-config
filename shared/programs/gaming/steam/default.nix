@@ -3,12 +3,6 @@
 {
   config = lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") (
     let
-      patchedBwrap = pkgs.bubblewrap.overrideAttrs (o: {
-        patches = (o.patches or []) ++ [
-          ./bwrap.patch
-        ];
-      });
-
       proton-ge-bin = pkgs.proton-ge-bin;
       protonCachyPkgs = inputs.proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system} or {};
       proton-cachyos = protonCachyPkgs.proton-cachyos-x86_64_v3 or null;
@@ -17,11 +11,6 @@
       programs.steam = {
         enable = true;
         package = pkgs.steam.override {
-          buildFHSEnv = (args: ((pkgs.buildFHSEnv.override {
-            bubblewrap = patchedBwrap;
-          }) (args // {
-            extraBwrapArgs = (args.extraBwrapArgs or []) ++ [ "--cap-add ALL" ];
-          })));
           extraPkgs = (pkgs: with pkgs; [
             gamemode
           ]);
@@ -46,12 +35,6 @@
           proton-cachyos
         ];
       };
-
-      # Make Steam use patched bwrap.
-      system.userActivationScripts.steamUsePatchedBwrap.text = ''
-        mkdir -p $HOME/.local/share/Steam/ubuntu12_32/steam-runtime/usr/libexec/steam-runtime-tools-0
-        ln -sfn ${patchedBwrap}/bin/bwrap $HOME/.local/share/Steam/ubuntu12_32/steam-runtime/usr/libexec/steam-runtime-tools-0/srt-bwrap
-        '';
 
       # Create symlink of proton-cachyos for use in other programs such as bs-manager.
       system.userActivationScripts.protonLink.text = lib.mkIf (proton-cachyos != null) ''

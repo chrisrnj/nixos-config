@@ -4,6 +4,7 @@
   imports = [
     ./asahi
     ./hardware-configuration.nix # Include the results of the hardware scan.
+    ./programs
   ];
 
   boot.blacklistedKernelModules = [ "macsmc-power" ];
