@@ -37,7 +37,7 @@ in
       encoder = "vulkan";
       capture = "kms";
       vk_tune = "1";
-      wan_encryption_mode = "0";
+#       wan_encryption_mode = "0";
     };
     applications = {
       apps = [
