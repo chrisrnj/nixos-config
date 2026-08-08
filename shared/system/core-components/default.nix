@@ -7,6 +7,9 @@
     scheduler = "scx_bpfland";
   };
 
+  # Enable uinput.
+  hardware.uinput.enable = true;
+
   # Ensure NTP is enabled to sync time automatically via the internet
   services.ntp.enable = true;
 

@@ -11,10 +11,6 @@ in
     ./custom-edid
   ];
 
-  services.udev.extraRules = lib.mkIf config.services.xserver.enable ''
-    KERNEL=="uinput", MODE="0666", GROUP="input", SYMLINK+="uinput"
-  '';
-
   networking.firewall = lib.mkIf (config.services.sunshine.package == solar-flare) {
     allowedUDPPorts = [
       48005

@@ -26,6 +26,7 @@
     extraGroups = [
       "adbusers" # adb
       "i2c"
+      "uinput"
       "wheel"
     ];
     packages = with pkgs; [

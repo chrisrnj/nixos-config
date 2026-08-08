@@ -14,4 +14,6 @@
 
   # Waydroid
   virtualisation.waydroid.enable = true;
+
+  services.wivrn.autoStart = true;
 }

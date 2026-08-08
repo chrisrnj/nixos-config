@@ -4,6 +4,7 @@
   imports = [
     ./prismlauncher.nix
     ./steam
+    ./vr
   ];
 
   # Gamemode

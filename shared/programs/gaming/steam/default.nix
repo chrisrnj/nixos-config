@@ -42,19 +42,8 @@
         ln -sfn ${proton-cachyos.steamcompattool} $HOME/.local/share/proton
         '';
 
-      # WiVRn
-      services.wivrn = {
-        enable = true;
-        openFirewall = true;
-        autoStart = true;
-        highPriority = true;
-        steam.importOXRRuntimes = true;
-        package = pkgs.wivrn;
-      };
-
       environment.systemPackages = with pkgs; [
         bs-manager
-        wayvr
       ];
   });
 }
