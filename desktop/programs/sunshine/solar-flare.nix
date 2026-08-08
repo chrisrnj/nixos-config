@@ -93,7 +93,7 @@ let
 in
 stdenv'.mkDerivation (finalAttrs: {
   pname = "solarflare";
-  version = "2026.804.1";
+  version = "2026.807.1";
 
   __structuredAttrs = true;
   strictDeps = true;
@@ -115,7 +115,7 @@ stdenv'.mkDerivation (finalAttrs: {
     # (submodule-less) `rev`-based fetch and will NOT match this `tag`-based
     # fetch. Build once with lib.fakeHash and paste in the real value from
     # the mismatch error.
-    hash = "sha256-LCOEnRHgl4m12lSaHz5rnrZil10WfmlEtDW/RxzkP1w=";
+    hash = "sha256-8PmQ09H3LT12CGdixe5cs0MLR3kBwcmO3H9UPpoDDWc=";
     fetchSubmodules = true;
   };
 
