@@ -30,6 +30,7 @@
     gcc
     gradle_9
     gradle-completion
+    python3
 
     # Tools
     qbittorrent
