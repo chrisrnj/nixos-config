@@ -24,7 +24,6 @@
       autoUpdate = true;
       autoUpdateNotification = true;
       frameless = true;
-      transparent = true;
       plugins = {
         clearUrls.enable = true;
 #         fakeNitro.enable = true;
