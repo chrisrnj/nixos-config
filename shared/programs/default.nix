@@ -8,7 +8,7 @@
       ./discord
       ./gaming # Gaming settings.
       ./java
-#       ./nix-ld # Run arbitrary programs.
+      ./nix-ld # Run arbitrary programs.
       ./obs # OBS and plugins.
     ];
 
