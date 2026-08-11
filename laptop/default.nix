@@ -5,9 +5,10 @@
     ./asahi
     ./hardware-configuration.nix # Include the results of the hardware scan.
     ./programs
+    ./ssh
   ];
 
-  boot.blacklistedKernelModules = [ "macsmc-power" ];
+#   boot.blacklistedKernelModules = [ "macsmc-power" ];
 
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];
