@@ -5,6 +5,7 @@ final: prev:
       skanpage = kdePrev.skanpage.override {
         tesseractLanguages = [
           "por"
+          "eng"
         ];
       };
     }
