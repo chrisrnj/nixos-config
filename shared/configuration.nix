@@ -41,6 +41,7 @@
     vim
     kdePackages.kate
     kdePackages.kcalc
+    kdePackages.skanpage
     lm_sensors
     vulkan-tools
     clinfo
