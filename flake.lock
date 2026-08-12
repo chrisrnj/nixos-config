@@ -6,15 +6,15 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1786367009,
-        "narHash": "sha256-5Hm7sY6Kjw0lZmISOmv0+Kzt7mqJhEyb+g+I5tVStzM=",
-        "owner": "nix-community",
+        "lastModified": 1786453026,
+        "narHash": "sha256-J16/unYHT27W/kv+wM9zSREnBRhv3gIfzQaPPQopV8Q=",
+        "owner": "elisaado",
         "repo": "nixos-apple-silicon",
-        "rev": "3d2325a31f37221e276f721fabac363a65d0cf7d",
+        "rev": "a2f526d2b8252bb9894b2d3e547a47257451c1bd",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "elisaado",
         "repo": "nixos-apple-silicon",
         "type": "github"
       }
@@ -220,11 +220,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1786424471,
-        "narHash": "sha256-vPUheEwncdu+w613Higt3O+359CSfliCdAFCPKzTWuQ=",
+        "lastModified": 1786530600,
+        "narHash": "sha256-4bsIkFdLMj/IkYIC6D4MmMGz/oR0WAKkHW0Umm1NJ9M=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "c0c689edb0b36eb36e2b6349548b18daafd6a034",
+        "rev": "f4c14da614eb4e146cd8b65426038c75b06596f9",
         "type": "github"
       },
       "original": {
@@ -469,11 +469,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1786428288,
-        "narHash": "sha256-TO2u5+GJ8yKxsLt931hbzaYWpUvoapiYOJGO3O7FMcA=",
+        "lastModified": 1786543139,
+        "narHash": "sha256-Rv16J2RKTfD4PMti7y+cj8WGiZb1+VoyhGhFA2yNDbg=",
         "owner": "PrismLauncher",
         "repo": "PrismLauncher",
-        "rev": "480223973dc3bba5490a936f38133097d4324e8a",
+        "rev": "d909e0205d940cb2846fdab665aa3c69015303af",
         "type": "github"
       },
       "original": {
