@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 let
   hostName = config.networking.hostName;
