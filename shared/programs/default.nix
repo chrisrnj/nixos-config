@@ -80,5 +80,8 @@
 
   # KDE Partition manager
   programs.partition-manager.enable = true;
+
+  # Waydroid
+  virtualisation.waydroid.enable = true;
 }
 

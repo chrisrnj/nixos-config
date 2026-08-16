@@ -12,8 +12,5 @@
   # OpenRGB
   services.hardware.openrgb.enable = true;
 
-  # Waydroid
-  virtualisation.waydroid.enable = true;
-
   services.wivrn.autoStart = true;
 }
