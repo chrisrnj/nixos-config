@@ -14,6 +14,7 @@
     dhcpcd.extraConfig = "nohook resolv.conf";
 
     nftables.enable = true;
+    firewall.trustedInterfaces = [ "waydroid0" "tailscale0" ];
   };
 
 # Generate an immutable /etc/resolv.conf from the nameserver settings
