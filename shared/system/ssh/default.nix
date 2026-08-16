@@ -13,6 +13,11 @@
   programs.ssh = {
     startAgent = true;
     enableAskPassword = true;
+    extraConfig = ''
+      Host github.com
+        IdentityFile /home/christiano/.ssh/github
+        IdentitiesOnly yes
+    '';
   };
 
   environment.variables = {
