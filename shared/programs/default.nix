@@ -10,6 +10,7 @@
       ./java
 #       ./nix-ld # Run arbitrary programs.
       ./obs # OBS and plugins.
+      ./zsh # Zsh
     ];
 
   # List packages installed in system profile. To search, run:
