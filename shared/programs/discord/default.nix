@@ -10,7 +10,7 @@
       enable = if pkgs.stdenv.hostPlatform.system == "x86_64-linux" then true else false;
       vencord.enable = true;
       krisp.enable = true;
-      openASAR.enable = true;
+      openASAR.enable = false;
       commandLineArgs = [
         "--enable-blink-features=MiddleClickAutoscroll"
         "--force-device-scale-factor"
