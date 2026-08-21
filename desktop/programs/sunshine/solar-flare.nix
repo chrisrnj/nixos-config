@@ -93,7 +93,7 @@ let
 in
 stdenv'.mkDerivation (finalAttrs: {
   pname = "solarflare";
-  version = "2026.807.1";
+  version = "2026.809.1";
 
   __structuredAttrs = true;
   strictDeps = true;
@@ -110,12 +110,12 @@ stdenv'.mkDerivation (finalAttrs: {
     # even though the top-level repo files were fetched fine) — while still
     # being deterministic enough to pass hash verification on retries.
     # See pkgs/build-support/fetchgit/default.nix in nixpkgs.
-    tag = "v${finalAttrs.version}-solarflare";
+    rev = "bcac0d42bb41dffd33aa76cd9f82d44248be824c";
     # TODO: recompute. The old hash was captured against the broken
     # (submodule-less) `rev`-based fetch and will NOT match this `tag`-based
     # fetch. Build once with lib.fakeHash and paste in the real value from
     # the mismatch error.
-    hash = "sha256-8PmQ09H3LT12CGdixe5cs0MLR3kBwcmO3H9UPpoDDWc=";
+    hash = "sha256-2gbWXJqMthmbEsNu74M4aZ7+kQsnDfRLEmYT5s0RMp8=";
     fetchSubmodules = true;
   };
 

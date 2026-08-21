@@ -35,15 +35,10 @@
     docker.storageDriver = "btrfs";
   };
 
-  networking.firewall.trustedInterfaces = [ "virbr0" ];
-
-  boot.kernelParams = lib.optionals config.hardware.cpu.intel.updateMicrocode [
-    # Enable IOMMU
-    "intel_iommu=on"
-    "iommu=pt"
-  ] ++ lib.optionals config.hardware.cpu.amd.updateMicrocode [
-    # Enable IOMMU
-    "amd_iommu=on"
-    "iommu=pt"
+  environment.systemPackages = with pkgs; [
+    dnsmasq
+    swtpm
   ];
+
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
 }

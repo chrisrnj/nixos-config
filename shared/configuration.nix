@@ -46,6 +46,7 @@
     vulkan-tools
     clinfo
     libimobiledevice
+    pciutils
     gdb
   ];
 
