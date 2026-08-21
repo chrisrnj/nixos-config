@@ -12,7 +12,7 @@
     highPriority = true;
     steam = {
       enable = config.programs.steam.enable;
-      importOXRRuntimes = false;
+      importOXRRuntimes = true;
     };
   };
 }
