@@ -47,6 +47,7 @@
     clinfo
     libimobiledevice
     pciutils
+    usbutils
     gdb
   ];
 
