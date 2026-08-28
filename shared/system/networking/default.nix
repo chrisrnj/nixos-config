@@ -5,16 +5,26 @@
   networking = {
     networkmanager = {
       enable = true; # Enable networking
-      dns = "none";
-      wifi.backend = "iwd";
+      wifi = {
+        backend = "iwd";
+        powersave = true;
+      };
     };
 
     # Cloudflare DNS
     nameservers = [ "2606:4700:4700::1111" "2606:4700:4700::1001" "1.1.1.1" "1.0.0.1" ];
-    dhcpcd.extraConfig = "nohook resolv.conf";
 
     nftables.enable = true;
-    firewall.trustedInterfaces = [ "waydroid0" "tailscale0" ];
+  };
+
+  services.resolved = {
+    enable = true;
+    settings.Resolve = {
+      DNSSEC = "true";
+      Domains = [ "~." ];
+      DNSOverTLS = "true";
+      FallbackDNS = config.networking.nameservers;
+    };
   };
 
 # Generate an immutable /etc/resolv.conf from the nameserver settings

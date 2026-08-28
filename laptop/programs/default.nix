@@ -18,4 +18,10 @@
 #       patches = [];
 #     };
   };
+
+  # Captive portal login browser.
+  programs.captive-browser = {
+    enable = true;
+    interface = "wlan0";
+  };
 }
