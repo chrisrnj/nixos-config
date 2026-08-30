@@ -5,7 +5,6 @@
     "vfio_pci"
     "vfio"
     "vfio_iommu_type1"
-    "amdgpu"
   ];
 
   boot.kernelParams = [
@@ -16,7 +15,7 @@
     "pcie_aspm=off"
     "pci=noaer"
     "split_lock_detect=off"
-#    "vfio-pci.ids=1002:7550,1002:ab40"
+#    "vfio-pci.ids=1002:7550,1002:ab40" - not recommended in Navi 48. Let the amdgpu driver bind the gpu first.
   ];
 
   boot.extraModprobeConfig = ''
@@ -25,9 +24,7 @@
     options kvm report_ignored_msrs=0
   '';
 
-  boot.kernelPackages = lib.mkForce pkgs.linuxPackages_latest;
-
   services.hardware.openrgb.enable = lib.mkForce false;
 
-  services.displayManager.autoLogin.enable = lib.mkForce false;
+  services.displayManager.plasma-login-manager.enable = lib.mkForce false;
 }

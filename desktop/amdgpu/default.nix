@@ -25,4 +25,9 @@
 #    AMD_VULKAN_ICD = "RADV";
 #    VDPAU_DRIVER = "va_gl";
   };
+
+  # Fix plymouth not showing.
+  boot.initrd.kernelModules = [
+    "amdgpu"
+  ];
 }
