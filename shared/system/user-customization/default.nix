@@ -51,6 +51,7 @@
 
   environment.sessionVariables = {
     KWIN_WAYLAND_SUPPORT_XX_PIP_V1 = "1"; # Experimental wayland pip protocol.
+    KWIN_DRM_USE_COLOR_PIPELINE = "1"; # Enable direct scanout.
     NIXOS_OZONE_WL = "1"; # Use ozone wayland.
   };
 
