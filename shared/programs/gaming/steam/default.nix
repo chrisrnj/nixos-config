@@ -31,6 +31,7 @@
         #protontricks.enable = true;
         extraCompatPackages = [
           proton-ge-bin
+          dwproton-bin
         ] ++ lib.optionals (proton-cachyos != null) [
           proton-cachyos
         ];
