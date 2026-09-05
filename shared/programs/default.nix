@@ -38,6 +38,7 @@
     python3
 
     # Tools
+    easyeffects
     qbittorrent
     unrar
     mpv
