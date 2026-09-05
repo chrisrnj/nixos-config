@@ -16,7 +16,7 @@
 
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
-    proton-cachyos.url = "github:powerofthe69/proton-cachyos-nix";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
@@ -24,11 +24,6 @@
     };
 
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
-
-#     librepods = {
-#       url = "github:kavishdevar/librepods/linux/rust";
-#       inputs.nixpkgs.follows = "nixpkgs";
-#     };
   };
 
   outputs = inputs@{ self, nixpkgs, ... }: {
@@ -42,6 +37,7 @@
 
         inputs.lanzaboote.nixosModules.lanzaboote
         inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
+        inputs.chaotic.nixosModules.default
 
         ./shared
         ./desktop

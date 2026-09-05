@@ -7,8 +7,11 @@
     ./vr
   ];
 
-  # Gamemode
-  programs.gamemode.enable = true;
+  services.ananicy = {
+    enable = true;
+    package = pkgs.ananicy-cpp;
+    rulesProvider = pkgs.ananicy-rules-cachyos_git;
+  };
 
   # Xbox Controller driver
   hardware.xpadneo.enable = true;
