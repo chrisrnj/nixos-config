@@ -52,7 +52,7 @@
         })
 
         inputs.apple-silicon.nixosModules.default
-        inputs.nixpkgs-xr.nixosModules.nixpkgs-xr
+        inputs.chaotic.nixosModules.default
 
         ./shared
         ./laptop
