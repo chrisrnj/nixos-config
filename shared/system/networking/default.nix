@@ -11,6 +11,8 @@
       };
     };
 
+    dhcpcd.extraConfig = "nohook resolv.conf";
+
     # Cloudflare DNS
     nameservers = [ "2606:4700:4700::1111" "2606:4700:4700::1001" "1.1.1.1" "1.0.0.1" ];
 
@@ -20,10 +22,20 @@
   services.resolved = {
     enable = true;
     settings.Resolve = {
-      DNSSEC = "true";
+      DNS = [
+        "1.1.1.1#cloudflare-dns.com"
+        "2606:4700:4700::1111#cloudflare-dns.com"
+      ];
+      FallbackDNS = [
+        "1.0.0.1#cloudflare-dns.com"
+        "2606:4700:4700::1001#cloudflare-dns.com"
+      ];
       Domains = [ "~." ];
-      DNSOverTLS = "true";
-      FallbackDNS = config.networking.nameservers;
+      DNSSEC = true;
+      DNSOverTLS = true;
+      Cache = true;
+      LLMNR = false;
+      MulticastDNS = false;
     };
   };
 
