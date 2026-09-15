@@ -23,6 +23,7 @@
     hunspellDicts.pt_BR
     hunspellDicts.en_US
     tenacity
+    kdePackages.kdenlive
 
     # Development
     jetbrains.idea
@@ -59,7 +60,7 @@
   programs.firefox.enable = true;
 
   # KDE Connect
-#   programs.kdeconnect.enable = true;
+  programs.kdeconnect.enable = true;
 
   # Git
   programs.git = {

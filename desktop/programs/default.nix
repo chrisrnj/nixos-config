@@ -2,12 +2,8 @@
 
 {
   imports = [
-    ./alvr
+#     ./alvr
     ./sunshine
-  ];
-
-  environment.systemPackages = with pkgs; [
-    davinci-resolve
   ];
 
   # OpenRGB
