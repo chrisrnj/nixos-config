@@ -7,7 +7,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      la = "ls -la";
+      la = "ls -lAh";
       edit = "sudo -e";
       update = "sudo nixos-rebuild boot";
     };
@@ -29,7 +29,7 @@
         "vscode"
         "z"
       ];
-      theme = "robbyrussell";
+      theme = "intheloop";
     };
   };
 
