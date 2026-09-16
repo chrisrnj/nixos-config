@@ -33,18 +33,9 @@
   environment.systemPackages = lib.singleton (pkgs.ungoogled-chromium.override {
     enableWideVine = true;
     commandLineArgs = [
-      "--enable-features=AcceleratedVideoEncoder,AcceleratedVideoDecodeLinuxGL,AcceleratedVideoDecodeLinuxZeroCopyGL,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,VaapiVideoDecoder,VaapiVideoEncoder,PlatformHEVCDecoderSupport,UseMultiPlaneFormatForHardwareVideo,CanvasOopRasterization,UseOzonePlatform"
-      "--ignore-gpu-blocklist"
       "--enable-zero-copy"
-      "--use-vulkan"
-      "--enable-gpu"
-      "--enable-gpu-rasterization"
-      "--canvas-oop-rasterization"
-      "--enable-accelerated-mjpeg-decode"
-      "--enable-global-vaapi-lock"
+      "--enable-features=AcceleratedVideoEncoder,VaapiVideoDecoder,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,EnableTabMuting"
 #       "--enable-blink-features=MiddleClickAutoscroll"
-      "--use-gpu-scheduler-dfs"
-      "--cast-streaming-hardware-h264"
     ];
   });
 }
