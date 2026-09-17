@@ -7,17 +7,6 @@
     scheduler = "scx_bpfland";
   };
 
-  # Enable polkit service
-  security.polkit.enable = true;
-
-  # Create the setuid wrapper for pkexec
-  security.wrappers.pkexec = {
-    source = lib.getExe' pkgs.polkit "pkexec";
-    setuid = true;
-    owner = "root";
-    group = "root";
-  };
-
   # Enable uinput.
   hardware.uinput.enable = true;
 
