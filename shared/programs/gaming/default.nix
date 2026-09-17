@@ -24,4 +24,10 @@
   ] ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
     heroic
   ];
+
+  # GPU Screen Recorder
+  programs.gpu-screen-recorder = {
+    enable = true;
+    ui.enable = true;
+  };
 }
