@@ -1,4 +1,4 @@
 [
-  (import ./spectacle)
   (import ./skanpage)
+  (import ./spectacle)
 ]
