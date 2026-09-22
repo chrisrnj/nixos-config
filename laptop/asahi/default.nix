@@ -1,10 +1,15 @@
-{ ... }:
+{ lib, ... }:
 
 {
   hardware.asahi = {
     enable = true;
     # Video Acceleration.
     avd.vaapi-support = true;
+    peripheralFirmwareDirectory = lib.findFirst (path: builtins.pathExists (path + "/firmware.cpio")) null [
+      /boot/vendorfw
+      /mnt/boot/vendorfw
+      ./firmware
+    ];
   };
 
   # Use systemd-boot.
