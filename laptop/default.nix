@@ -8,6 +8,8 @@
     ./ssh
   ];
 
+  nixpkgs.hostPlatform = "aarch64-linux";
+
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];
     "/home".options = [ "compress=zstd" "noatime" ];

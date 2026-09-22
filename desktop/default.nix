@@ -12,6 +12,9 @@
     ../optional/secureboot
   ];
 
+  # Compile and deploy NixOS configuration for aarch64 laptop.
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];
     "/home".options = [ "compress=zstd" "noatime" ];
