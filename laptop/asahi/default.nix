@@ -8,7 +8,7 @@
     peripheralFirmwareDirectory = lib.findFirst (path: builtins.pathExists (path + "/firmware.cpio")) null [
       /boot/vendorfw
       /mnt/boot/vendorfw
-      ./firmware
+      /etc/nixos/laptop/asahi/firmware
     ];
   };
 
