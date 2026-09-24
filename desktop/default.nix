@@ -8,7 +8,8 @@
     ./programs
     ./ssh
 #     ./virtualisation
-    ../optional/kernels/cachyos-kernel.nix
+#     ../optional/kernels/cachyos-kernel.nix
+    ../optional/kernels/linux-rc.nix
     ../optional/secureboot
   ];
 
