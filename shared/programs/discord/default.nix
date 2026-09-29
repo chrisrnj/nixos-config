@@ -37,7 +37,6 @@
         imageZoom.enable = true;
         messageLogger.enable = true;
         noReplyMention.enable = true;
-        oneko.enable = true;
         onePingPerDm.enable = true;
         platformIndicators = {
           enable = true;

@@ -26,11 +26,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1790610543,
-        "narHash": "sha256-OIbWe7rANBR3nscjPOqPOn4QlPNJhqqkhB35ZiLa7rU=",
+        "lastModified": 1790670980,
+        "narHash": "sha256-sJBXp4sPVnI960+iZrvKekGglOjgWJz0y+IZOgetuuY=",
         "owner": "chaotic-cx",
         "repo": "nyx",
-        "rev": "ff3c71b06466357121cdc00ebd71a6b7085dc77e",
+        "rev": "9e2ba4b2e416c8262eec1bcb8348eef741019b9c",
         "type": "github"
       },
       "original": {
@@ -304,11 +304,11 @@
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1790655436,
-        "narHash": "sha256-EDRksG2GGNSqt/Rsa6uH1dorEtQjuzhzO3x3jlOqn+8=",
+        "lastModified": 1790684305,
+        "narHash": "sha256-ZSVS1RZrILgkthJc4Oq3hZZFuHnxZD+mIcKECWcNZnU=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "bdda824e0161df2640075a585ebac4c5da2cfa98",
+        "rev": "62693d0b6f0d85ffc08162f0b71a69cda3ee9357",
         "type": "github"
       },
       "original": {
@@ -551,11 +551,11 @@
         "nixpkgs": "nixpkgs_7"
       },
       "locked": {
-        "lastModified": 1790660577,
-        "narHash": "sha256-zERHOC65sw8OAawCDYtcAu9hHCpm5mEtA/+31aZkXTk=",
+        "lastModified": 1790692869,
+        "narHash": "sha256-y0bjHoiHDAHeiO1jRSweKDQCGvVhs7bSdcEp8SbK4ZE=",
         "owner": "PrismLauncher",
         "repo": "PrismLauncher",
-        "rev": "056598278aa00340d00e70c8480805bbd3e17bfa",
+        "rev": "1a1a11458231fb897941bf4360531768f9dbf556",
         "type": "github"
       },
       "original": {
