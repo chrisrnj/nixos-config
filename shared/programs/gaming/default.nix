@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./prismlauncher.nix
     ./steam
     ./vr
   ];
@@ -21,6 +20,7 @@
 
   environment.systemPackages = with pkgs; [
     mangohud
+    prismlauncher
   ] ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
     heroic
   ];

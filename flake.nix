@@ -22,8 +22,6 @@
       url = "github:nix-community/lanzaboote";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    prismlauncher.url = "github:PrismLauncher/PrismLauncher";
   };
 
   outputs = inputs@{ self, nixpkgs, ... }: {
