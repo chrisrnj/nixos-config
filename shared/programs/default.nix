@@ -26,11 +26,14 @@
     kdePackages.kdenlive
 
     # Development
-    jetbrains.idea
+    intellij-idea
+    clion
+    pycharm
+    rider
+    rust-rover
+    webstorm
     android-tools
     maven
-    msedit
-    vscode.fhs
     dotnet-sdk
     gnumake
     gcc
