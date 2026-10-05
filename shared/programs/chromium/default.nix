@@ -35,6 +35,7 @@
     commandLineArgs = [
       "--enable-zero-copy"
       "--enable-features=AcceleratedVideoEncoder,VaapiVideoDecoder,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,EnableTabMuting"
+      "--disable-features=WaylandWpColorManagerV1"
 #       "--enable-blink-features=MiddleClickAutoscroll"
     ];
   });
