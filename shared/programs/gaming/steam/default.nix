@@ -25,18 +25,14 @@
         extraCompatPackages = with pkgs; [
           dwproton-bin
           proton-cachyos_x86_64_v3
-          proton-ge-bin
+          proton-ge-custom
         ];
       };
 
       # Create symlink of proton for use in other programs such as bs-manager.
       system.userActivationScripts.protonLink.text = ''
         mkdir -p $HOME/.local/share
-        ln -sfn ${pkgs.dwproton-bin.steamcompattool} $HOME/.local/share/proton
+        ln -sfn ${pkgs.proton-cachyos_x86_64_v3.steamcompattool} $HOME/.local/share/proton
         '';
-
-      environment.systemPackages = with pkgs; [
-        bs-manager
-      ];
   });
 }

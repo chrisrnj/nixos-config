@@ -1,8 +1,10 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     wayvr
+  ] ++ lib.optionals (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+    bs-manager
   ];
 
   # WiVRn
