@@ -19,7 +19,6 @@
         "git"
         "gradle"
         "mvn"
-        "pip"
         "podman"
         "python"
         "safe-paste"
