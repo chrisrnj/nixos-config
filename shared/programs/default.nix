@@ -77,6 +77,14 @@
     binfmt = true;
   };
 
+  # Neovim
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    defaultEditor = true;
+  };
+
   # Tailscale
   services.tailscale.enable = true;
 
