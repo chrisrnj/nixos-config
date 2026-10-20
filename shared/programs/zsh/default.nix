@@ -9,7 +9,7 @@
     shellAliases = {
       la = "ls -lAh";
       edit = "sudo -e";
-      update = "sudo nixos-rebuild boot";
+      update = "cd /etc/nixos && sudo nix flake update && sudo nixos-rebuild switch --flake .#${config.networking.hostName}";
     };
 
     ohMyZsh = {
