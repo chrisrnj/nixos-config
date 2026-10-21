@@ -46,7 +46,7 @@
     qbittorrent
     unrar
     mpv
-    handbrake
+#     handbrake
     ffmpeg
     filezilla
     yt-dlp
