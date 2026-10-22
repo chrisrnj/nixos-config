@@ -43,6 +43,8 @@
     kdePackages.kcalc
     kdePackages.skanpage
     lm_sensors
+    libva-utils
+    vdpauinfo
     vulkan-tools
     clinfo
     libimobiledevice

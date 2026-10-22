@@ -7,6 +7,18 @@
 #     scheduler = "scx_bpfland";
 #   };
 
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      libvdpau-va-gl
+    ];
+  };
+
+  environment.variables = {
+    VDPAU_DRIVER = "va_gl";
+  };
+
   # Enable uinput.
   hardware.uinput.enable = true;
 
