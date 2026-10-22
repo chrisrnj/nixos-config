@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -8,13 +8,14 @@
     ./programs
     ./ssh
 #     ./virtualisation
-#     ../optional/kernels/cachyos-kernel.nix
-    ../optional/kernels/linux-rc.nix
     ../optional/secureboot
   ];
 
-  # Compile and deploy NixOS configuration for aarch64 laptop.
-  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    # Compile and deploy NixOS configuration for aarch64 laptop.
+    binfmt.emulatedSystems = [ "aarch64-linux" ];
+  };
 
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];

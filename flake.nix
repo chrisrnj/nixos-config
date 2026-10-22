@@ -8,15 +8,22 @@
     # Use `nix flake update` to update the flake to the latest revision of the chosen release channel.
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    apple-silicon.url = "github:nix-community/nixos-apple-silicon/main";
-
-    nixpkgs-xr.url = "github:nix-community/nixpkgs-xr";
-
-    nixcord.url = "github:4evy/nixcord";
-
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    apple-silicon = {
+      url = "github:nix-community/nixos-apple-silicon/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixpkgs-xr = {
+      url = "github:nix-community/nixpkgs-xr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixcord = {
+      url = "github:4evy/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     lanzaboote = {
       url = "github:nix-community/lanzaboote";
