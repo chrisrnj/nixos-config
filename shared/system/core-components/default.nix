@@ -9,7 +9,7 @@
 
   hardware.graphics = {
     enable = true;
-    enable32Bit = true;
+    enable32Bit = pkgs.stdenv.hostPlatform.system == "x86_64-linux";
     extraPackages = with pkgs; [
       libvdpau-va-gl
     ];
