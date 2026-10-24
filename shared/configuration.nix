@@ -10,7 +10,14 @@
     plymouth.enable = true;
     consoleLogLevel = 3;
     initrd.verbose = false;
-    loader.timeout = 0;
+
+    # Bootloader settings.
+    loader = {
+      # Use systemd-boot.
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+      timeout = 0;
+    };
 
     kernelParams = [
       # Plymouth

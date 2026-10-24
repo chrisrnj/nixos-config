@@ -6,11 +6,7 @@
   ];
 
   boot = {
-    # Bootloader settings.
-    loader = {
-      efi.canTouchEfiVariables = true;
-      systemd-boot.enable = lib.mkForce false; # Lanzaboote
-    };
+    loader.systemd-boot.enable = lib.mkForce false; # Lanzaboote
 
     # Enable Secure Boot with Lanzaboote
     lanzaboote = {
