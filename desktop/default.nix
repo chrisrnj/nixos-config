@@ -11,11 +11,7 @@
     ../optional/secureboot
   ];
 
-  boot = {
-    kernelPackages = pkgs.linuxPackages_latest;
-    # Compile and deploy NixOS configuration for aarch64 laptop.
-    binfmt.emulatedSystems = [ "aarch64-linux" ];
-  };
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];
