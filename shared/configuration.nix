@@ -6,11 +6,6 @@
 
 {
   boot = {
-    # Clean Quiet Boot
-    plymouth.enable = true;
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-
     # Bootloader settings.
     loader = {
       # Use systemd-boot.
@@ -19,10 +14,11 @@
       timeout = 0;
     };
 
+    # Enable "Silent boot"
+    plymouth.enable = true;
+    consoleLogLevel = 3;
     kernelParams = [
-      # Plymouth
       "quiet"
-      "splash"
       "rd.udev.log_level=3"
       "rd.systemd.show_status=auto"
     ];
