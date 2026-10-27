@@ -21,7 +21,7 @@
         dedicatedServer.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;
         extest.enable = true;
-        #protontricks.enable = true;
+        protontricks.enable = true;
         extraCompatPackages = with pkgs; [
           dwproton-bin
           proton-cachyos_x86_64_v3
@@ -32,7 +32,7 @@
       # Create symlink of proton for use in other programs such as bs-manager.
       system.userActivationScripts.protonLink.text = ''
         mkdir -p $HOME/.local/share
-        ln -sfn ${pkgs.dwproton-bin.steamcompattool} $HOME/.local/share/proton
+        ln -sfn ${pkgs.proton-ge-custom} $HOME/.local/share/proton
         '';
   });
 }
