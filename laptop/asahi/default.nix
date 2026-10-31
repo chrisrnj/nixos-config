@@ -3,6 +3,7 @@
 {
   hardware.asahi = {
     enable = true;
+    peripheralFirmwareDirectory = null;
     # Video Acceleration.
     avd.vaapi-support = true;
   };
