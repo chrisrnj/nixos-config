@@ -10,7 +10,6 @@
             PROTON_ENABLE_WAYLAND = "1";
             PROTON_USE_PIPEWIRE = "1";
             PROTON_FSR4_UPGRADE = "1";
-            PROTON_DXVK_LOWLATENCY = "1";
             PROTON_DISCORD_BRIDGE = "1";
             LOW_LATENCY_LAYER = "1";
             VKD3D_CONFIG = "descriptor_heap";
@@ -20,10 +19,7 @@
         remotePlay.openFirewall = true;
         dedicatedServer.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;
-        extest.enable = true;
-        protontricks.enable = true;
         extraCompatPackages = with pkgs; [
-          dwproton-bin
           proton-cachyos_x86_64_v3
           proton-ge-custom
         ];
