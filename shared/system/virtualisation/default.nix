@@ -15,16 +15,7 @@
       qemu.swtpm.enable = true;
     };
 
-    containers = {
-      enable = true;
-      storage.settings = {
-        storage = {
-          driver = "btrfs";
-          graphroot = "/var/lib/containers/storage";
-          runroot = "/run/containers/storage";
-        };
-      };
-    };
+    containers.storage.settings.storage.driver = "btrfs";
 
     podman = {
       enable = true;
