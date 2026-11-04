@@ -7,7 +7,7 @@
     ./networking
     ./programs
     ./ssh
-#     ./virtualisation
+    ./virtualisation
     ../optional/secureboot
   ];
 
