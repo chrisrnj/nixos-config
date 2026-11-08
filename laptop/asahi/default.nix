@@ -4,8 +4,11 @@
   hardware.asahi = {
     enable = true;
     peripheralFirmwareDirectory = null;
-    # Video Acceleration.
-    avd.vaapi-support = true;
+    avd = {
+      codecs = [ "all" ];
+      # Use VA-API translation layer.
+      vaapi-support = true;
+    };
   };
 
   nix.settings = {
