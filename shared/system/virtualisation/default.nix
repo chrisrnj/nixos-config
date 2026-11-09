@@ -12,7 +12,13 @@
 
     libvirtd = {
       enable = true;
-      qemu.swtpm.enable = true;
+      qemu = {
+        swtpm.enable = true;
+        verbatimConfig = ''
+          user = "christiano"
+          group = "users"
+        '';
+      };
     };
 
     containers.storage.settings.storage.driver = "btrfs";

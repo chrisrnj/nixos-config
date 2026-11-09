@@ -23,6 +23,7 @@
   users.users.christiano = {
     isNormalUser = true;
     description = "Christiano";
+    linger = true;
     extraGroups = [
       "adbusers" # adb
       "i2c"
