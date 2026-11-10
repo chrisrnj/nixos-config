@@ -31,6 +31,7 @@
       libx11
       libxfixes
       libGL
+      libglvnd
       libva
       pipewire
       libxcb
@@ -41,7 +42,6 @@
 
       # Required
       glib
-      gtk2
 
       # Inspired by steam
       # https://github.com/NixOS/nixpkgs/blob/master/pkgs/by-name/st/steam/package.nix#L36-L85
@@ -102,7 +102,6 @@
       freeglut
       libjpeg
       libpng
-      libpng12
       libsamplerate
       libmikmod
       libtheora
@@ -141,6 +140,41 @@
       # Appimages need fuse, e.g. https://musescore.org/fr/download/musescore-x86_64.AppImage
       fuse
       e2fsprogs
+
+      # darktable nightly AppImage https://github.com/darktable-org/darktable/releases
+      gmp
+
+      # RapidRaw
+      harfbuzz
+      libgpg-error
+      # https://github.com/xournalpp/xournalpp/releases/download/v1.2.4/xournalpp-1.2.4-x86_64.AppImage
+      fribidi
+      librsvg
+      # https://github.com/nix-community/nix-ld/issues/95#issuecomment-3041993870
+      (runCommand "librsvg" {} ''
+        mkdir -p $out/lib/gdk-pixbuf-2.0/2.10.0/loaders
+        ln -s "${librsvg}/lib/gdk-pixbuf-2.0/2.10.0/loaders/libpixbufloader_svg.so" "$out/lib/libpixbufloader-svg.so"
+      '')
+
+      # pdfmastereditor
+      sane-backends
+      pkcs11helper
+
+      # Qt6 requires this (e.g. used in zxlive)
+      libpulseaudio
+      krb5
+      libxcb-cursor
+      libxcb-wm
+      libxcb-util
+      libxcb-image
+      libxcb-keysyms
+      libxcb-render-util
+      qt6.qtbase
+      qt6.qtcharts
+      lz4
+      brotli
+      stdenv.cc.cc.lib
+      ffmpeg_6
     ];
   };
 }
