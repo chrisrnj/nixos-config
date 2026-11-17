@@ -174,7 +174,6 @@
       lz4
       brotli
       stdenv.cc.cc.lib
-      ffmpeg_6
     ];
   };
 }
