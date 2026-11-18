@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794910092,
-        "narHash": "sha256-acu4eioYHfOOUAhWL9765/h/2f2/PGmVmZmiZ7YPKZQ=",
+        "lastModified": 1794976853,
+        "narHash": "sha256-KYFg4islF6aMUUTmLBka+/8df6hFoPyBdOGB8afZoro=",
         "owner": "nix-community",
         "repo": "nixos-apple-silicon",
-        "rev": "ce7d0925860cf29d686b24ea5798f3a02676b4f7",
+        "rev": "41bdf43ee2987611d956ca6fad6d684798ea5487",
         "type": "github"
       },
       "original": {
@@ -255,11 +255,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794537146,
-        "narHash": "sha256-bTKSclXJAmo9qdxPedTBHUGr8awPr4BrbOoOutJsYIc=",
-        "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
+        "lastModified": 1794750194,
+        "narHash": "sha256-1qOtz5nZG+3hsBEqeKtUx+T5gSaJ+hONlBWWSbH+mJ8=",
+        "rev": "1a08097fc1ed85575db39763b2c4a5d8970a37ba",
         "type": "tarball",
-        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1119549.d5cc68339997/nixexprs.tar.zst"
+        "url": "https://releases.nixos.org/nixos/unstable/nixos-26.11pre1121687.1a08097fc1ed/nixexprs.tar.zst"
       },
       "original": {
         "type": "tarball",
