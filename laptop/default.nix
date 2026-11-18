@@ -1,4 +1,4 @@
-{ ... }:
+{ lib, ... }:
 
 {
   imports = [
@@ -7,6 +7,9 @@
     ./programs
     ./ssh
   ];
+
+  # Currently failing to compile on aarch64.
+  services.scx-loader.enable = lib.mkForce false;
 
   nixpkgs.hostPlatform = "aarch64-linux";
 
