@@ -33,9 +33,10 @@
   environment.systemPackages = lib.singleton (pkgs.ungoogled-chromium.override {
     enableWideVine = true;
     commandLineArgs = [
-#       "--enable-zero-copy"
-      "--enable-features=AcceleratedVideoDecoder,AcceleratedVideoEncoder,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,EnableTabMuting"
+      "--enable-zero-copy"
+      "--enable-features=AcceleratedVideoDecoder,AcceleratedVideoEncoder,VaapiIgnoreDriverChecks,Vulkan,DefaultANGLEVulkan,VulkanFromANGLE,EnableTabMuting"
       "--disable-features=WaylandWpColorManagerV1"
+      "--no-default-browser-check"
 #       "--enable-blink-features=MiddleClickAutoscroll"
     ];
   });

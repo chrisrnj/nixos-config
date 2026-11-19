@@ -20,15 +20,15 @@
         dedicatedServer.openFirewall = true;
         localNetworkGameTransfers.openFirewall = true;
         extraCompatPackages = with pkgs; [
-          proton-cachyos_x86_64_v3
-          proton-ge-custom
+          proton-cachyos-bin_x86_64_v3
+          proton-ge-bin_edge
         ];
       };
 
       # Create symlink of proton for use in other programs such as bs-manager.
       system.userActivationScripts.protonLink.text = ''
         mkdir -p $HOME/.local/share
-        ln -sfn ${pkgs.proton-ge-custom} $HOME/.local/share/proton
+        ln -sfn ${pkgs.proton-ge-bin_edge} $HOME/.local/share/proton
         '';
   });
 }
