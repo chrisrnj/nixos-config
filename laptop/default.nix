@@ -11,6 +11,11 @@
   # Currently failing to compile on aarch64.
   services.scx-loader.enable = lib.mkForce false;
 
+  environment.sessionVariables = {
+    MOZ_USE_XINPUT2 = "1";
+    MOZ_DISABLE_RDD_SANDBOX = "1";
+  };
+
   nixpkgs.hostPlatform = "aarch64-linux";
 
   fileSystems = {
