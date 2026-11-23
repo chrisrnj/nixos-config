@@ -11,7 +11,7 @@
     ../optional/secureboot
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_testing;
 
   fileSystems = {
     "/".options = [ "compress=zstd" "noatime" ];
