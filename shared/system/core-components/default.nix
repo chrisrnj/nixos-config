@@ -19,6 +19,9 @@
     VDPAU_DRIVER = "va_gl";
   };
 
+  # RT Kit for Pipewire and other apps.
+  security.rtkit.enable = true;
+
   # Enable uinput.
   hardware.uinput.enable = true;
 
