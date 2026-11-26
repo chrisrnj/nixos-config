@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./audio
     ./core-components # General services like printing, bluetooth, etc.
     ./networking # Network settings.
     ./ssh # SSH settings.
