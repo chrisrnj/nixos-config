@@ -41,10 +41,10 @@
 
   # Essential system tools, always have them available independent of configuration.
   environment.systemPackages = with pkgs; [
-    vim
     kdePackages.kate
     kdePackages.kcalc
     kdePackages.skanpage
+    kdePackages.filelight
     lm_sensors
     libva-utils
     vdpauinfo
